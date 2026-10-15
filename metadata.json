@@ -1,0 +1,6 @@
+{
+  "name": "FitPulse - Athletic Telemetry & Attendance HUD",
+  "description": "High-contrast telemetry HUD for hybrid athletes, workout logging, procedural attendance heatmaps, and zero-latency biometric tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #0f131c;
+  --color-surface-dim: #0f131c;
+  --color-surface-bright: #353942;
+  --color-surface-container-lowest: #0a0e16;
+  --color-surface-container-low: #181c24;
+  --color-surface-container: #1c2028;
+  --color-surface-container-high: #262a33;
+  --color-surface-container-highest: #31353e;
+  --color-on-surface: #dfe2ee;
+  --color-on-surface-variant: #c4c9ac;
+  --color-inverse-surface: #dfe2ee;
+  --color-inverse-on-surface: #2c3039;
+  --color-outline: #8e9379;
+  --color-outline-variant: #444933;
+  --color-surface-tint: #abd600;
+  --color-primary: #ffffff;
+  --color-on-primary: #283500;
+  --color-primary-container: #c3f400;
+  --color-on-primary-container: #556d00;
+  --color-inverse-primary: #506600;
+  --color-secondary: #d3fbff;
+  --color-on-secondary: #00363a;
+  --color-secondary-container: #00eefc;
+  --color-on-secondary-container: #00686f;
+  --color-tertiary: #ffffff;
+  --color-on-tertiary: #412d00;
+  --color-tertiary-container: #ffdea8;
+  --color-on-tertiary-container: #845d00;
+  --color-error: #ffb4ab;
+  --color-on-error: #690005;
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+  --color-primary-fixed: #c3f400;
+  --color-primary-fixed-dim: #abd600;
+  --color-on-primary-fixed: #161e00;
+  --color-on-primary-fixed-variant: #3c4d00;
+  --color-secondary-fixed: #7df4ff;
+  --color-secondary-fixed-dim: #00dbe9;
+  --color-on-secondary-fixed: #002022;
+  --color-on-secondary-fixed-variant: #004f54;
+  --color-tertiary-fixed: #ffdea8;
+  --color-tertiary-fixed-dim: #ffba20;
+  --color-on-tertiary-fixed: #271900;
+  --color-on-tertiary-fixed-variant: #5e4200;
+  --color-background: #0f131c;
+  --color-on-background: #dfe2ee;
+  --color-surface-variant: #31353e;
+
+  --font-headline-lg-mobile: 'Barlow Condensed', sans-serif;
+  --font-headline-md: 'Barlow Condensed', sans-serif;
+  --font-headline-lg: 'Barlow Condensed', sans-serif;
+  --font-display-hero: 'Barlow Condensed', sans-serif;
+  --font-display-hero-mobile: 'Barlow Condensed', sans-serif;
+  --font-title-sm: 'Geist', sans-serif;
+  --font-body-lg: 'Geist', sans-serif;
+  --font-body-md: 'Geist', sans-serif;
+  --font-body-sm: 'Geist', sans-serif;
+  --font-metric-val: 'JetBrains Mono', monospace;
+  --font-label-code: 'JetBrains Mono', monospace;
+
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-margin-sm: 1rem;
+  --spacing-margin: 1.5rem;
+  --spacing-margin-lg: 3rem;
+  --spacing-gutter-sm: 0.75rem;
+  --spacing-gutter: 1.25rem;
+  --spacing-gutter-lg: 2rem;
+}
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0f131c;
+    color: #dfe2ee;
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  body {
+    overscroll-behavior: none;
+    min-height: 100vh;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+/* Custom Typography Helpers */
+.font-headline-md {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.font-headline-lg-mobile {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.font-headline-lg {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.font-display-hero {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.font-metric-val {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: -0.03em;
+}
+
+.font-label-code {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+.font-title-sm {
+  font-family: 'Geist', sans-serif;
+  font-weight: 600;
+}
+
+.font-body-md {
+  font-family: 'Geist', sans-serif;
+}
+
+.font-body-sm {
+  font-family: 'Geist', sans-serif;
+}
+
+/* Material symbols utility */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+.material-symbols-outlined.fill-1 {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
